@@ -11,4 +11,7 @@ class TestTddBash < Minitest::Test
 		assert_equal(4, my_num().length)
 	end
 
+	def test_assert_that_win_num_has_value
+		assert_equal("1", win_num()[0])
+	end
 end
