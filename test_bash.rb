@@ -7,9 +7,12 @@ class TestTddBash < Minitest::Test
 		assert_equal(1, number_comparison("1111", "1222"))		
 	end	
 
-	def test_assert_2_matches_returns_2
+	def test_assert_x_matches_returns_x
 		assert_equal(2, number_comparison("1111", "1122"))
+		assert_equal(3, number_comparison("1111", "1112"))
+		assert_equal(4, number_comparison("1111", "1111"))
 	end
+
 
 end
 
