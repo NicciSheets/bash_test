@@ -14,8 +14,11 @@ class TestTddBash < Minitest::Test
 	end
 
 	def test_assert_end_result_is_array
-		assert_equal(Array, end_result().class)
+		my_tickets = ["1111", "1112", "1122"]
+		winning_tickets = ["1234", "2222"]
+		assert_equal(Array, end_result(my_tickets, winning_tickets).class)
 	end
+
 end
 
 

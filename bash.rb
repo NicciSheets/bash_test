@@ -13,7 +13,7 @@ def number_comparison(my_ticket, winning_ticket)
 	matching_number
 end
 
-def end_result()
+def end_result(my_tickets, winning_tickets)
 	[]
 end
 
