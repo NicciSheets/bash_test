@@ -13,6 +13,11 @@ class TestTddBash < Minitest::Test
 		assert_equal(4, number_comparison("1111", "1111"))
 	end
 
-
+	def test_assert_end_result_is_array
+		assert_equal(Array, end_result().class)
+	end
 end
+
+
+
 
