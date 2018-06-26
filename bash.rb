@@ -32,6 +32,9 @@ def number_comparison(my_ticket, winning_ticket)
 	match_possibility
 end
 
+def multiple_comparison(my_tickets, winning_tickets)
+end
+
 
 #def end_result(my_tickets, winning_tickets)
 #	[]
