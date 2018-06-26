@@ -33,6 +33,7 @@ def number_comparison(my_ticket, winning_ticket)
 end
 
 def multiple_comparison(my_tickets, winning_tickets)
+[]
 end
 
 
