@@ -16,6 +16,7 @@
 
 
 def number_comparison(my_ticket, winning_ticket)
+	p my_ticket
 	my_ticket = my_ticket.split('')
 	puts "My ticket is #{my_ticket}."
 	winning_ticket = winning_ticket.split('')
@@ -23,17 +24,71 @@ def number_comparison(my_ticket, winning_ticket)
 	matching_number = 4
 	winning_ticket.each_with_index do |num, index|
 		if num == my_ticket[index]
+			p num
+			num
 			matching_number -= 1
 		end
 	end
-	matching_number
+	p matching_number
 	#match_possibility = 4
 	#match_possibility -= matching_number
 	#match_possibility
 end
 
-def check_for_match_arr(myticketarray, winningticket)
+def check_for_match_arr(my_ticket, winning_ticket)
+	empty = []
+	my_ticket.each do |num|
+		if number_comparison(num, winning_ticket) == 1
+			empty << num
+			end
+		end
+	empty
 end
+
+def check_for_match_arr2(my_ticket, winning_ticket)
+	empty = []
+	my_ticket.each do |num|
+		empty << number_comparison(my_ticket, winning_ticket)
+	end
+	empty
+end
+
+
+def winarr(my_ticketarray, winning_ticket)
+	empty = 0
+	winning_ticket.each do |num|
+		matches = check_for_match_arr2(my_ticketarray, num)
+		winners = 0
+		matches.each do |n|
+			if n == 0
+				winners += 1
+			end
+		end
+		empty << winners
+	end
+	empty
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
 # def multiple_comparison(my_tickets, winning_tickets)
 # 	arr = []
 # 	my_tickets = my_tickets.each_slice(1).to_a 
