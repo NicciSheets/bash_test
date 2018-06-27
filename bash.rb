@@ -20,21 +20,21 @@ def number_comparison(my_ticket, winning_ticket)
 	puts "My ticket is #{my_ticket}."
 	winning_ticket = winning_ticket.split('')
 	puts "Winning ticket is #{winning_ticket}." 
-	matching_number = 0
+	matching_number = 4
 	winning_ticket.each_with_index do |num, index|
 		if num == my_ticket[index]
-			matching_number += 1
+			matching_number -= 1
 		end
 	end
 	matching_number
-	match_possibility = 4
-	match_possibility -= matching_number
-	match_possibility
+	#match_possibility = 4
+	#match_possibility -= matching_number
+	#match_possibility
 end
 
 def multiple_comparison(my_tickets, winning_tickets)
 	arr = []
-	my_tickets = my_tickets.each_slice(1).to_a
+	my_tickets = my_tickets.each_slice(1).to_a 
 		puts "My tickets are #{my_tickets}."
 	winning_tickets = winning_tickets.each_slice(1).to_a
 		puts "Winning ticket is #{winning_tickets}." 
@@ -47,6 +47,9 @@ def multiple_comparison(my_tickets, winning_tickets)
 	matching_numbers
 	match_possibilities = 4
 	match_possibilities -= matching_numbers
+	if match_possibilities == 1
+		puts my_tickets[index]
+	end
 	match_possibilities 
 	arr << match_possibilities
 	arr
