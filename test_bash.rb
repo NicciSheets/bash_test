@@ -31,7 +31,10 @@ class TestTddBash < Minitest::Test
 	 	assert_equal([2, 0], winarr(["1234", "1234", "1244", "1255"],["1234", "1299"]))
 	end
 
-	def
+	def test_assert_returns_separate_arrays_for_winners_and_losers
+		assert_equal([[1], [3, 4]], winarr(["1234", "4567", "4564"],["1234"]))
+	end
+
 end
 
 
