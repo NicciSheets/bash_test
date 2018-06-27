@@ -58,10 +58,3 @@ def multiple_comparison(my_tickets, winning_tickets)
 	#end
 	#match_possibilities = empty_arr
 end
-
-
-#def end_result(my_tickets, winning_tickets)
-#	[]
-#end
-
-
