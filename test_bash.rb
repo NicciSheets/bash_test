@@ -27,9 +27,11 @@ class TestTddBash < Minitest::Test
 	 	assert_equal(["1113", "1114"], check_for_match_arr(["1113", "6666", "1114"], "1112"))
 	end
 
-	 def test_assert_multiple_winners_returned
+	def test_assert_multiple_winners_returned
 	 	assert_equal([2, 0], winarr(["1234", "1234", "1244", "1255"],["1234", "1299"]))
-	 end
+	end
+
+	def
 end
 
 
