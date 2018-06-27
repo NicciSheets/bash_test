@@ -16,16 +16,14 @@ class TestTddBash < Minitest::Test
 		assert_equal(1, number_comparison("1112", "1111"))
 	end
 
-	def test_assert_multiple_comparisons_returns_as_array
-		my_tickets = ["1113", "1114"]
-		winning_tickets = ["1112"]
-		assert_equal(Array, multiple_comparison(my_tickets, winning_tickets).class)
-	end
+	# def test_assert_multiple_comparisons_returns_as_array
+	# 	my_tickets = ["1113", "1114"]
+	# 	winning_tickets = ["1112"]
+	# 	assert_equal(Array, multiple_comparison(my_tickets, winning_tickets).class)
+	# end
 
 	def test_assert_multiple_comparisons_returns_as_array_of_one_offs
-		my_tickets = ["1113", "1114", "1122"]
-		winning_tickets = ["1112"]
-		assert_equal(["1113", "1122"], multiple_comparison(my_tickets, winning_tickets))
+		assert_equal(["1113", "1122"], check_for_match_arr(["1113", "1114", "1122"], "1112"))
 	end
 
 end

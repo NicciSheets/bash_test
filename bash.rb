@@ -32,25 +32,28 @@ def number_comparison(my_ticket, winning_ticket)
 	#match_possibility
 end
 
-def multiple_comparison(my_tickets, winning_tickets)
-	arr = []
-	my_tickets = my_tickets.each_slice(1).to_a 
-		puts "My tickets are #{my_tickets}."
-	winning_tickets = winning_tickets.each_slice(1).to_a
-		puts "Winning ticket is #{winning_tickets}." 
-	matching_numbers = 4
-	winning_tickets.each_with_index do |num, index|
-		puts "num #{num} and index #{index}"
-		if num == my_tickets[index]
-			matching_numbers -= 1
-			if num == 1
-				puts num = num
-			end
-		end
-	arr << num
-	end
-	arr 
+def check_for_match_arr(myticketarray, winningticket)
 end
+# def multiple_comparison(my_tickets, winning_tickets)
+# 	arr = []
+# 	my_tickets = my_tickets.each_slice(1).to_a 
+# 		puts "My tickets are #{my_tickets}."
+# 	winning_tickets = winning_tickets.each_slice(1).to_a
+# 		puts "Winning ticket is #{winning_tickets}." 
+# 	matching_numbers = 4
+# 	winning_tickets.each_with_index do |num, index|
+# 		#puts "num #{num} and index #{index}"
+# 		if num == my_tickets[index]
+# 			matching_numbers -= 1
+# 			if num == 1
+# 				puts my_tickets[index]
+# 			end
+# 		end
+# 	matching_numbers << num
+# 	end
+# 	matching_numbers = arr
+# 	 p "this is arr #{arr}"
+# end
 
 	#match_possibilities.each_with_index do |num, index|
 	#	if num == 1[index]
