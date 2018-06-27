@@ -40,15 +40,16 @@ def multiple_comparison(my_tickets, winning_tickets)
 		puts "Winning ticket is #{winning_tickets}." 
 	matching_numbers = 4
 	winning_tickets.each_with_index do |num, index|
+		puts "num #{num} and index #{index}"
 		if num == my_tickets[index]
 			matching_numbers -= 1
 			if num == 1
-				puts my_tickets.to_a
+				puts num = num
 			end
 		end
-	arr << my_tickets.to_a
+	arr << num
 	end
-	arr = my_tickets.to_a
+	arr 
 end
 
 	#match_possibilities.each_with_index do |num, index|
