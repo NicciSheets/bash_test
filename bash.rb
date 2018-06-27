@@ -55,18 +55,26 @@ def check_for_match_arr2(my_ticket, winning_ticket)
 
 
  def winarr(myticketarray, winningticket)
-	empty = []
+	warr = []
+	losers = []
 	winningticket.each do |ticket|
 		matches = check_for_match_arr2(myticketarray, ticket)
 		winners = 0
 		matches.each_with_index do |n|
 			if n == 0
 				winners += 1
+			else 
+				losers << n
 			end
 		end
-		empty << winners
+		warr << winners
 	end
-	empty
+	losers = losers.sort
+	warr = warr.sort
+	new_array = []
+	new_array << warr
+	new_array << losers
+	new_array
 end
 
 
