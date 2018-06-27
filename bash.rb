@@ -46,20 +46,20 @@ def check_for_match_arr(my_ticket, winning_ticket)
 end
 
 def check_for_match_arr2(my_ticket, winning_ticket)
+ 	empty = []
+ 	my_ticket.each do |num|
+ 		empty << number_comparison(num, winning_ticket)
+ 	end
+ 	empty
+ end
+
+
+ def winarr(myticketarray, winningticket)
 	empty = []
-	my_ticket.each do |num|
-		empty << number_comparison(my_ticket, winning_ticket)
-	end
-	empty
-end
-
-
-def winarr(my_ticketarray, winning_ticket)
-	empty = 0
-	winning_ticket.each do |num|
-		matches = check_for_match_arr2(my_ticketarray, num)
+	winningticket.each do |ticket|
+		matches = check_for_match_arr2(myticketarray, ticket)
 		winners = 0
-		matches.each do |n|
+		matches.each_with_index do |n|
 			if n == 0
 				winners += 1
 			end
