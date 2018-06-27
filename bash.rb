@@ -33,7 +33,7 @@ def number_comparison(my_ticket, winning_ticket)
 end
 
 def multiple_comparison(my_tickets, winning_tickets)
-	empty_arr = []
+	arr = []
 	my_tickets = my_tickets.each_slice(1).to_a
 		puts "My tickets are #{my_tickets}."
 	winning_tickets = winning_tickets.each_slice(1).to_a
@@ -47,13 +47,16 @@ def multiple_comparison(my_tickets, winning_tickets)
 	matching_numbers
 	match_possibilities = 4
 	match_possibilities -= matching_numbers
-	match_possibilities.each do |num|
-		if num == 1
-			puts my_tickets.to_a
-		end
-	match_possibilities << num
-	end
-	match_possibilities = empty_arr
+	match_possibilities 
+	arr << match_possibilities
+	arr
+	#match_possibilities.each_with_index do |num, index|
+	#	if num == 1[index]
+	#		puts my_tickets.to_a
+	#	end
+	#match_possibilities
+	#end
+	#match_possibilities = empty_arr
 end
 
 

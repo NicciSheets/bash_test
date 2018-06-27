@@ -24,7 +24,7 @@ class TestTddBash < Minitest::Test
 	def test_assert_multiple_comparisons_returns_as_array_of_one_offs
 		my_tickets = ["1113", "1114", "1122"]
 		winning_tickets = ["1112"]
-		assert_equal("1113, 1114", multiple_comparison(my_tickets, winning_tickets))
+		assert_equal(2, multiple_comparison(my_tickets, winning_tickets))
 	end
 
 end
